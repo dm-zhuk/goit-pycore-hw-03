@@ -485,3 +485,74 @@ def number_of_groups(n, k):
 
 print(number_of_groups(50, 7))
 """
+
+"""HW-03 TASK-01
+Створіть функцію get_days_from_today(date), яка розраховує кількість днів між заданою датою і поточною датою.
+Вимоги до завдання:
+Функція приймає один параметр: date — рядок, що представляє дату у форматі 'РРРР-ММ-ДД' (наприклад, '2020-10-09').
+Функція повертає ціле число, яке вказує на кількість днів від заданої дати до поточної. Якщо задана дата пізніша за поточну, результат має бути від'ємним.
+У розрахунках необхідно враховувати лише дні, ігноруючи час (години, хвилини, секунди).
+Для роботи з датами слід використовувати модуль datetime Python.
+Рекомендації для виконання:
+Імпортуйте модуль datetime.
+Перетворіть рядок дати у форматі 'РРРР-ММ-ДД' у об'єкт datetime.
+Отримайте поточну дату, використовуючи datetime.today().
+Розрахуйте різницю між поточною датою та заданою датою.
+Поверніть різницю у днях як ціле число.
+Критерії оцінювання:
+Коректність роботи функції: функція повинна точно обраховувати кількість днів між датами.
+Обробка винятків: функція має впоратися з неправильним форматом вхідних даних.
+Читабельність коду: код повинен бути чистим і добре документованим.
+Приклад:
+Якщо сьогодні 5 травня 2021 року, виклик get_days_from_today("2021-10-09") повинен повернути −157, оскільки 9 жовтня 2021 року є на 157 днів пізніше від 5 травня 2021 року
+"""
+
+from datetime import datetime, timedelta
+
+
+def get_upcoming_birthdays(users):
+    today = datetime.today().date()
+    upcoming_birthdays = []
+
+    for user in users:
+        birthday = datetime.strptime(user["birthday"], "%Y.%m.%d").date()
+        birthday_this_year = birthday.replace(year=today.year)
+
+        if birthday_this_year < today:
+            birthday_this_year = birthday_this_year.replace(year=today.year + 1)
+
+        days_until_birthday = (birthday_this_year - today).days
+
+        if 0 <= days_until_birthday <= 7:
+            greeting_date = birthday_this_year
+
+            if greeting_date.weekday() == 5:  # Sat
+                greeting_date += timedelta(days=2)
+            elif greeting_date.weekday() == 6:  # Sun
+                greeting_date += timedelta(days=1)
+
+            upcoming_birthdays.append(
+                {
+                    "name": user["name"],
+                    "greeting_date": greeting_date.strftime("%m.%d"),
+                }
+            )
+
+    return upcoming_birthdays
+
+
+users = [
+    {"name": "John Doe", "birthday": "1985.01.23"},
+    {"name": "Sarah Thomas", "birthday": "1983.07.25"},
+    {"name": "Jane Smith", "birthday": "1990.03.01"},
+    {"name": "Katie Taylor", "birthday": "1987.09.09"},
+    {"name": "Daniel Martinez", "birthday": "1994.02.20"},
+    {"name": "Alice Johnson", "birthday": "1988.03.02"},
+    {"name": "Michael Brown", "birthday": "1985.01.28"},
+    {"name": "Emily Davis", "birthday": "1980.02.22"},
+    {"name": "Chris Wilson", "birthday": "1995.04.12"},
+    {"name": "David Anderson", "birthday": "1991.02.26"},
+]
+
+upcoming_birthdays = get_upcoming_birthdays(users)
+print("Current week greetings list:", upcoming_birthdays)
