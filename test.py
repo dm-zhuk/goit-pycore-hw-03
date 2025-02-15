@@ -1,31 +1,34 @@
-# FizzBuzz
-# try:
-#     num = int(input('Enter any number: '))
+# !/usr/bin/python
+#  -*- coding: utf-8 -*-
 
-#     if num % 3 == 0 and num % 5 == 0:
-#         print("FizzBuzz")
-#     elif num % 3 == 0:
-#         print("Fizz")
-#     elif num % 5 == 0:
-#         print("Buzz")
-#     else:
-#         print(num)
-# except ValueError:
-#     print("Please enter a valid integer.")
+#  FizzBuzz
+#  try:
+#      num = int(input('Enter any number: '))
 
-
-# CORRECT TEST:
-def format_string(string, length):
-    if len(string) >= length:
-        return string
-    spaces = (length - len(string)) // 2
-    return " " * spaces + string
+#      if num % 3 == 0 and num % 5 == 0:
+#          print("FizzBuzz")
+#      elif num % 3 == 0:
+#          print("Fizz")
+#      elif num % 5 == 0:
+#          print("Buzz")
+#      else:
+#          print(num)
+#  except ValueError:
+#      print("Please enter a valid integer.")
 
 
-result = format_string(string="abaa", length=15)
-print(f"|{result}|")
+#  CORRECT TEST:
+#  def format_string(string, length):
+#      if len(string) >= length:
+#          return string
+#      spaces = (length - len(string)) // 2
+#      return " " * spaces + string
 
-# CORRECT VERSION 1:
+
+#  result = format_string(string="abaa", length=15)
+#  print(f"|{result}|")
+
+#  CORRECT VERSION 1:
 """def format_string(string: str, length: float) -> int:
     length_of_string = len(string)
 
@@ -60,17 +63,17 @@ match point:
 """
 
 
-# def get_fullname(first_name, last_name, middle_name=""):
-#     if middle_name:
-#         full_name = f"{first_name} {middle_name} {last_name}"
+#  def get_fullname(first_name, last_name, middle_name=""):
+#      if middle_name:
+#          full_name = f"{first_name} {middle_name} {last_name}"
 
-#     else:
-#         full_name = f"{first_name} {last_name}"
-#     return full_name
+#      else:
+#          full_name = f"{first_name} {last_name}"
+#      return full_name
 
 
-# print(get_fullname("Erich", "Remark", "Maria"))
-# print(get_fullname("Tom", "Walker"))
+#  print(get_fullname("Erich", "Remark", "Maria"))
+#  print(get_fullname("Tom", "Walker"))
 
 
 """def get_fullname(first_name, last_name, middle_name=""):
@@ -87,266 +90,266 @@ print(get_fullname("Tom", "Walker"))"""
 
 
 # Задаємо конкретне число
-num = int(input())
+#  num = int(input())
 
-# Перевіряємо кратність
-if num % 3 == 0 and num % 5 == 0:
-    print("FizzBuzz")
-elif num % 3 == 0:
-    print("Fizz")
-elif num % 5 == 0:
-    print("Buzz")
-else:
-    print(num)
+#   Перевіряємо кратність
+#  if num % 3 == 0 and num % 5 == 0:
+#      print("FizzBuzz")
+#  elif num % 3 == 0:
+#      print("Fizz")
+#  elif num % 5 == 0:
+#      print("Buzz")
+#  else:
+#      print(num)
 
-work_experience = int(input("Enter your full work experience in years: "))
+#  work_experience = int(input("Enter your full work experience in years: "))
 
-if work_experience > 5:
-    developer_type = "Senior"
-elif work_experience > 1:
-    developer_type = "Middle"
-else:
-    developer_type = "Junior"
+#  if work_experience > 5:
+#      developer_type = "Senior"
+#  elif work_experience > 1:
+#      developer_type = "Middle"
+#  else:
+#      developer_type = "Junior"
 
-print(
-    f"Your work experience is {work_experience} full year(s), and your developer type is {developer_type} now."
-)
+#  print(
+#      f"Your work experience is {work_experience} full year(s), and your developer type is {developer_type} now."
+#  )
 
-money = 0
-if money:
-    print(f"You have {money} on your bank account")
-else:
-    print("You have no money and no debts")
+#  money = 0
+#  if money:
+#      print(f"You have {money} on your bank account")
+#  else:
+#      print("You have no money and no debts")
 
-# s1 = 'Hello'
-# s2 = 'world!'
-# joined_string = f"{s1} {s2}"  # Hello world!
+#  s1 = 'Hello'
+#  s2 = 'world!'
+#  joined_string = f"{s1} {s2}"   Hello world!
 
-my_list = [1, 2, 3, 4, 2, 2, 5, 2]
-count_2 = my_list.count(2)
-print(count_2)  # Виведе 4, оскільки число 2 зустрічається 4 рази
+# my_list = [1, 2, 3, 4, 2, 2, 5, 2]
+# count_2 = my_list.count(2)
+# print(count_2)   Виведе 4, оскільки число 2 зустрічається 4 рази
 
-my_list = [1, 2, 3, 4, 5]
-print(len(my_list))
+# my_list = [1, 2, 3, 4, 5]
+# print(len(my_list))
 
-nums = [3, 1, 4, 1, 5, 9, 2]
-nums.sort()
-print(nums)  # Виведе [1, 1, 2, 3, 4, 5, 9]
+# nums = [3, 1, 4, 1, 5, 9, 2]
+# nums.sort()
+# print(nums)   Виведе [1, 1, 2, 3, 4, 5, 9]
 
-nums.sort(reverse=True)
-print(nums)  # Виведе [9, 5, 4, 3, 2, 1, 1]
+# nums.sort(reverse=True)
+# print(nums)   Виведе [9, 5, 4, 3, 2, 1, 1]
 
-words = ["banana", "apple", "cherry"]
-words.sort(key=len)
-print(words)  # Виведе ['apple', 'banana', 'cherry']
+# words = ["banana", "apple", "cherry"]
+# words.sort(key=len)
+# print(words)   Виведе ['apple', 'banana', 'cherry']
 
-nums = [3, 1, 4, 1, 5, 9, 2]
-sorted_nums = sorted(nums, reverse=True)
-print(sorted_nums)  # Виведе [1, 1, 2, 3, 4, 5, 9]
+# nums = [3, 1, 4, 1, 5, 9, 2]
+# sorted_nums = sorted(nums, reverse=True)
+# print(sorted_nums)   Виведе [1, 1, 2, 3, 4, 5, 9]
 
-my_dict = {"name": "Alice", "age": 25, "city": "New York"}
-my_dict.pop("age")
-city = my_dict.get("city")
-print(city)
+# my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+# my_dict.pop("age")
+# city = my_dict.get("city")
+# print(city)
 
-a = {1, 2, 3}
-b = {3, 4, 5}
-print(a.intersection(b))  # {3}
-print(a & b)  # {3}
+# a = {1, 2, 3}
+# b = {3, 4, 5}
+# print(a.intersection(b))   {3}
+# print(a & b)   {3}
 
-a = {1, 2, 3}
-b = {3, 4, 5}
-# print(a.symmetric_difference(b))  # {1, 2, 4, 5}
-print(a ^ b)
-print(a | b)
-print(a - b)
-print(a & b)
+# a = {1, 2, 3}
+# b = {3, 4, 5}
+#  print(a.symmetric_difference(b))   {1, 2, 4, 5}
+# print(a ^ b)
+# print(a | b)
+# print(a - b)
+# print(a & b)
 
-s = "hello"
-print(s.upper())  # Виведе 'HELLO'
-print(s.capitalize())
+# s = "hello"
+# print(s.upper())   Виведе 'HELLO'
+# print(s.capitalize())
 
-# Просте форматування рядка
-name = "John"
-print("Hello, {}!".format(name))
+#  Просте форматування рядка
+# name = "John"
+# print("Hello, {}!".format(name))
 
-# Форматування з декількома аргументами
-age = 25
-print("Hello, {}. You are {} years old.".format(name, age))
+#  Форматування з декількома аргументами
+# age = 25
+# print("Hello, {}. You are {} years old.".format(name, age))
 
-# Використання іменованих аргументів
-print("Hello, {name}. You are {age} years old.".format(name="Jane", age=30))
+#  Використання іменованих аргументів
+# print("Hello, {name}. You are {age} years old.".format(name="Jane", age=30))
 
-# Використання індексів для вказівки порядку аргументів
-print("Hello, {1}. You are {0} years old.".format(age, name))
+#  Використання індексів для вказівки порядку аргументів
+# print("Hello, {1}. You are {0} years old.".format(age, name))
 
-my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-three_numbers = my_list[2::3]
+# my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# three_numbers = my_list[2::3]
 
-print(my_list[::-1])  # Output: [5, 4, 3, 2, 1, 0]
-print(my_list[::-2])
-print(three_numbers)
+# print(my_list[::-1])   Output: [5, 4, 3, 2, 1, 0]
+# print(my_list[::-2])
+# print(three_numbers)
 
-# length = float(input('Enter the room length (in meters): '))
-# width = float(input('Enter the room width (in meters): '))
+#  length = float(input('Enter the room length (in meters): '))
+#  width = float(input('Enter the room width (in meters): '))
+#  area = length * width
+#  print(f"The room area is: {area} sq. meters.")
+
+# my_list = []
+# my_list.insert(0, 2024)
+# my_list.insert(1, "Python")
+# my_list.insert(2, 3.12)
+#  my_list = [2024, 'Python', 3.12]
+
+# my_list = [2024, 3.12]
+# some_data = ["Python"]
+# my_list.extend(some_data)
+# my_list.insert(1, "Python")
+# my_list.reverse()
+# print(my_list)
+
+# data = {"year": 2024, "lang": "Python", "version": 3.12}
+# print(data)
+
+# cat = {}
+# cat["nick"] = "Simon"
+# cat["age"] = 7
+# cat["characteristics"] = ["gentle", "bytes"]
+
+# age = cat.get("age")
+
+# info = {"status": "vaccinated", "breed": True}
+# cat.update(info)
+
+# print(cat)
+# print(f"The cat's age is: {age}")
+
+# x = int(input("Введіть число: "))
+
+# if x % 2 == 0:
+#     print("Число x є парним.")
+# else:
+#     print("Число x є непарним.")
+
+# a = input("Введіть число: ")
+# a = int(a)
+# if a > 0:
+#     print("Число додатне")
+# elif a < 0:
+#     print("Число від'ємне")
+# else:
+#     print("Це число - нуль")
+
+# is_next = None
+# num = int(input("Enter the number of points: "))
+# if num >= 83:
+#     is_next = True
+# else:
+#     is_next = False
+
+# if is_next:
+#     print("Test passed")
+# else:
+#     print("Test failed")
+
+# rate = 4.32
+# night_rate = rate / 2
+# value_day = 164
+# value_night = 60
+# payment = (rate * value_day) + (night_rate * value_night)
+# print(f"Total electricity cost: {payment} EUR")
+
+# first_name = "Tom"
+# last_name = "Walker"
+# print(f"Name: {first_name}, Surname: {last_name}")
+
+# first_name = "Tom"
+# last_name = "Walker"
+# full_name = first_name + " " + last_name
+# print(full_name)
+
+# length = 2.75
+# width = 1.75
+# area = length * width
+# show = (
+#     f"With width {width} and length {length} of the room, its area is equal to {area}"
+# )
+# print(show)
+
+# length = float(input("Enter the room length (in meters): "))
+# width = float(input("Enter the room width (in meters): "))
 # area = length * width
 # print(f"The room area is: {area} sq. meters.")
 
-my_list = []
-my_list.insert(0, 2024)
-my_list.insert(1, "Python")
-my_list.insert(2, 3.12)
-# my_list = [2024, 'Python', 3.12]
+# length = "2.75"
+# width = "1.75"
+# area = float(length) * float(width)
+# show = (
+#     f"With width {width} and length {length} of the room, its area is equal to {area}"
+# )
+# print(show)
 
-my_list = [2024, 3.12]
-some_data = ["Python"]
-my_list.extend(some_data)
-my_list.insert(1, "Python")
-my_list.reverse()
-print(my_list)
+# is_active = True
+# is_delete = False
 
-data = {"year": 2024, "lang": "Python", "version": 3.12}
-print(data)
+# name = input("Your name? ")
+# email = input("Your email? ")
+# age = int(input("Your age? "))
+# height = float(input("Your height? "))
+# is_active = bool(input("Would you like to receive notifications? (Y/N): "))
 
-cat = {}
-cat["nick"] = "Simon"
-cat["age"] = 7
-cat["characteristics"] = ["gentle", "bytes"]
-
-age = cat.get("age")
-
-info = {"status": "vaccinated", "breed": True}
-cat.update(info)
-
-print(cat)
-print(f"The cat's age is: {age}")
-
-x = int(input("Введіть число: "))
-
-if x % 2 == 0:
-    print("Число x є парним.")
-else:
-    print("Число x є непарним.")
-
-a = input("Введіть число: ")
-a = int(a)
-if a > 0:
-    print("Число додатне")
-elif a < 0:
-    print("Число від'ємне")
-else:
-    print("Це число - нуль")
-
-is_next = None
-num = int(input("Enter the number of points: "))
-if num >= 83:
-    is_next = True
-else:
-    is_next = False
-
-if is_next:
-    print("Test passed")
-else:
-    print("Test failed")
-
-rate = 4.32
-night_rate = rate / 2
-value_day = 164
-value_night = 60
-payment = (rate * value_day) + (night_rate * value_night)
-print(f"Total electricity cost: {payment} EUR")
-
-first_name = "Tom"
-last_name = "Walker"
-print(f"Name: {first_name}, Surname: {last_name}")
-
-first_name = "Tom"
-last_name = "Walker"
-full_name = first_name + " " + last_name
-print(full_name)
-
-length = 2.75
-width = 1.75
-area = length * width
-show = (
-    f"With width {width} and length {length} of the room, its area is equal to {area}"
-)
-print(show)
-
-length = float(input("Enter the room length (in meters): "))
-width = float(input("Enter the room width (in meters): "))
-area = length * width
-print(f"The room area is: {area} sq. meters.")
-
-length = "2.75"
-width = "1.75"
-area = float(length) * float(width)
-show = (
-    f"With width {width} and length {length} of the room, its area is equal to {area}"
-)
-print(show)
-
-is_active = True
-is_delete = False
-
-name = input("Your name? ")
-email = input("Your email? ")
-age = int(input("Your age? "))
-height = float(input("Your height? "))
-is_active = bool(input("Would you like to receive notifications? (Y/N): "))
-
-name = "Tom Walker"
-age = 20
-is_active = True
-subscription = None
-show = f"User {name} age {age} has an active account, subscription: {subscription}"
-print(show)
-
-# print('My first Python test')
-# print('Great it comes down so easy to console')
-# name = "Python"
-# print("Hello  "+name)
+# name = "Tom Walker"
 # age = 20
-# age += 2
-# print(age)
-# print("your age is "+str(age))
+# is_active = True
+# subscription = None
+# show = f"User {name} age {age} has an active account, subscription: {subscription}"
+# print(show)
 
-# human = False
-# print(human)
+#  print('My first Python test')
+#  print('Great it comes down so easy to console')
+#  name = "Python"
+#  print("Hello  "+name)
+#  age = 20
+#  age += 2
+#  print(age)
+#  print("your age is "+str(age))
 
-# a = input("Рядок запрошення: ")
-# На екрані ви побачите: Рядок запрошення:
+#  human = False
+#  print(human)
 
-# age = input("How old are you? ")
-# age = int(age)
+#  a = input("Рядок запрошення: ")
+#  На екрані ви побачите: Рядок запрошення:
 
-# pi_str = str(3.14)
-# age_str = str(29)
+#  age = input("How old are you? ")
+#  age = int(age)
 
-# Встановлюємо ціни на продукти
-price_per_croissant = 1.04
-price_per_glass = 0.34
-price_per_coffee_pack = 4.42
+#  pi_str = str(3.14)
+#  age_str = str(29)
 
-# Кількість кожного продукту
-num_croissants = int(input("Введіть кількість круасанів: "))
-num_glasses = int(input("Введіть кількість склянок: "))
-num_coffee_packs = int(input("Введіть кількість упаковок кави: "))
+#  Встановлюємо ціни на продукти
+# price_per_croissant = 1.04
+# price_per_glass = 0.34
+# price_per_coffee_pack = 4.42
 
-# Обчислення загальної вартості
-total_cost = (
-    num_croissants * price_per_croissant
-    + num_glasses * price_per_glass
-    + num_coffee_packs * price_per_coffee_pack
-)
+#  Кількість кожного продукту
+# num_croissants = int(input("Введіть кількість круасанів: "))
+# num_glasses = int(input("Введіть кількість склянок: "))
+# num_coffee_packs = int(input("Введіть кількість упаковок кави: "))
 
-# Визначаємо кількість повних доларів і центів
-total_dollars = int(total_cost)
-total_cents = int(total_cost * 100)
+#  Обчислення загальної вартості
+# total_cost = (
+#     num_croissants * price_per_croissant
+#     + num_glasses * price_per_glass
+#     + num_coffee_packs * price_per_coffee_pack
+# )
 
-# Вивід результату
-print(f"Загальна вартість у повних доларах: {total_dollars} доларів")
-print(f"Загальна вартість у центах: {total_cents} центів")
+#  Визначаємо кількість повних доларів і центів
+# total_dollars = int(total_cost)
+# total_cents = int(total_cost * 100)
+
+#  Вивід результату
+# print(f"Загальна вартість у повних доларах: {total_dollars} доларів")
+# print(f"Загальна вартість у центах: {total_cents} центів")
 
 
 """
@@ -369,30 +372,30 @@ print(f"Загальна вартість у центах: {total_cents} цен�
 """
 
 
-def format_string(string: str, length: int) -> str:
-    # Get the length of the input string
-    length_of_string = len(string)
+# def format_string(string: str, length: int) -> str:
+#      Get the length of the input string
+#     length_of_string = len(string)
 
-    # If the string is longer than or equal to the specified length, return it unchanged
-    if length <= length_of_string:
-        return string
+#      If the string is longer than or equal to the specified length, return it unchanged
+#     if length <= length_of_string:
+#         return string
 
-    # Calculate the number of spaces needed for padding
-    padding = length - length_of_string
-    padding_left = padding // 2
-    padding_right = padding - padding_left
+#      Calculate the number of spaces needed for padding
+#     padding = length - length_of_string
+#     padding_left = padding // 2
+#     padding_right = padding - padding_left
 
-    # Create the formatted string with the calculated padding
-    formatted_string = " " * padding_left + string + " " * padding_right
-    return formatted_string
+#      Create the formatted string with the calculated padding
+#     formatted_string = " " * padding_left + string + " " * padding_right
+#     return formatted_string
 
 
-# Example usage
-result1 = format_string("Hello world!", 40)
-result2 = format_string("abaa", 15)
+#  Example usage
+# result1 = format_string("Hello world!", 40)
+# result2 = format_string("abaa", 15)
 
-print(f"|{result1}|")  # Centered within 40 characters
-print(f"|{result2}|")  # Centered within 15 characters
+# print(f"|{result1}|")   Centered within 40 characters
+# print(f"|{result2}|")   Centered within 15 characters
 
 """* Функція first: 
     * size є обов'язковим аргументом.
@@ -407,8 +410,8 @@ def first(size, *args):
     return size + len(args)
 
 
-print(first(5, "first", "second", "third"))  # Результат: 8
-print(first(1, "Alex", "Boris"))  # Результат: 3
+print(first(5, "first", "second", "third"))   Результат: 8
+print(first(1, "Alex", "Boris"))   Результат: 3
 
 
 def second(size, **kwargs):
@@ -417,9 +420,22 @@ def second(size, **kwargs):
 
 print(
     second(3, comment_one="first", comment_two="second", comment_third="third")
-)  # Результат: 6
-print(second(10, comment_one="Alex", comment_two="Boris"))  # Результат: 12
+)   Результат: 6
+print(second(10, comment_one="Alex", comment_two="Boris"))   Результат: 12
 """
+
+#  def factorial(n):
+#      print("Виклик функції factorial з n = ", n)
+#      if n == 1:
+#          print("Базовий випадок, n = 1, повернення 1")
+#          return 1
+#      else:
+#          result = n * factorial(n - 1)
+#          print("Повернення результату для n = ", n, ": ", result)
+#          return result
+
+
+#  print(factorial(5))
 
 """Рекурсія: Ми проводимо розіграш призів серед перших 50 підписників ютуб-каналу. Ми маємо 7 призів для розіграшу. Може виникнути питання, скільки різних списків переможців ми можемо отримати під час розіграшу? Для цього ми будемо використовувати формулу сполучень без повторень
 
@@ -452,4 +468,20 @@ denominator - це добуток факторіалів від кількост
 Використовуємо ціле ділення (//) для обчислення, оскільки ми працюємо з великими числами, де точне розділення може давати неточні результати через обмеження точності float в Python.
 
 Зверніть увагу, що для дуже великих чисел, як у випадку з 50!, навіть 64-бітові цілі числа можуть бути недостатніми, тому результати можуть бути не точними через обмеження в обчислювальних ресурсах. Для більш точних обчислень з великими числами можна використовувати бібліотеки як decimal або sympy в Python, що дозволяють працювати з числами дуже великої точності.
+
+def factorial(n):
+    if n < 2:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+
+def number_of_groups(n, k):
+     Формула: C(n,k) = n! / ((n - k)! * k!)
+    numerator = factorial(n)
+    denominator = factorial(n - k) * factorial(k)
+    return numerator // denominator
+
+
+print(number_of_groups(50, 7))
 """

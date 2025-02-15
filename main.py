@@ -1,15 +1,12 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
-
 def factorial(n):
-    if n < 2:
+    print("Виклик функції factorial з n = ", n)
+    if n == 1:
+        print("Базовий випадок, n = 1, повернення 1")
         return 1
     else:
-        return n * factorial(n - 1)
+        result = n * factorial(n - 1)
+        print("Повернення результату для n = ", n, ": ", result)
+        return result
 
 
-# def number_of_groups(n, k):
-
-
-print(factorial(5))  # виведе 120
+print(factorial(5))
