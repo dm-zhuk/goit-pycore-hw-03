@@ -1,16 +1,20 @@
 from datetime import datetime
 
-today = datetime.today().date()
 
-date_to_compare = input("Enter the date in the 'YYYY-MM-DD' format: ")
+def get_days_from_today(date: str) -> int:
+    today = datetime.today().date()
+    try:
+        date_obj = datetime.strptime(date, "%Y-%m-%d").date()
+        return (today - date_obj).days
+    except ValueError:
+        print("Error: Can't read the date. Please follow the 'YYYY-MM-DD' format.")
+        return None
 
-try:
-    date_obj = datetime.strptime(date_to_compare, "%Y-%m-%d")
-    get_days_from_today = date_obj.toordinal() - today.toordinal()
 
+date = input("Enter the date in the 'YYYY-MM-DD' format: ")
+result = get_days_from_today(date)
+
+if result is not None:
     print(
-        f"Days between today {today} and the date you entered: {get_days_from_today}."
+        f"Days between today ({datetime.today().date()}) and the date you entered: {result}."
     )
-
-except ValueError:
-    print("Error: Can't read the date. Please follow the 'YYYY-MM-DD' format.")
